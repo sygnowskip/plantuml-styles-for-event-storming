@@ -1,0 +1,95 @@
+' Event storming - PlantUML
+' 
+
+' Colors
+' ################################################
+
+!define ELEMENT_FONT_COLOR #000000
+!define TECHN_FONT_SIZE 12
+!define COMMAND_CARD_COLOR #21BDE6
+!define DOMAIN_EVENT_CARD_COLOR #FFA336
+!define POLICY_CARD_COLOR #B78AC1
+!define ACTOR_CARD_COLOR #FDDE14
+!define AGGREGATE_CARD_COLOR #FFF8A8
+!define READ_MODEL_CARD_COLOR #AAC34D
+!define EXTERNAL_SYSTEM_CARD_COLOR #EF4873
+
+' Styling
+' ################################################
+skinparam defaultTextAlignment center
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 0
+    FontColor ELEMENT_FONT_COLOR
+    FontSize 12
+}
+
+skinparam rectangle<<command>> {
+    BackgroundColor COMMAND_CARD_COLOR
+    BorderColor COMMAND_CARD_COLOR
+}
+
+skinparam rectangle<<domain_event>> {
+    BackgroundColor DOMAIN_EVENT_CARD_COLOR
+    BorderColor DOMAIN_EVENT_CARD_COLOR
+}
+
+skinparam rectangle<<policy>> {
+    BackgroundColor POLICY_CARD_COLOR
+    BorderColor POLICY_CARD_COLOR
+}
+
+skinparam rectangle<<actor>> {
+    BackgroundColor ACTOR_CARD_COLOR
+    BorderColor ACTOR_CARD_COLOR
+}
+
+skinparam rectangle<<aggregate>> {
+    BackgroundColor AGGREGATE_CARD_COLOR
+    BorderColor AGGREGATE_CARD_COLOR
+}
+
+skinparam rectangle<<read_model>> {
+    BackgroundColor READ_MODEL_CARD_COLOR
+    BorderColor READ_MODEL_CARD_COLOR
+}
+
+skinparam rectangle<<external_system>> {
+    BackgroundColor EXTERNAL_SYSTEM_CARD_COLOR
+    BorderColor EXTERNAL_SYSTEM_CARD_COLOR
+}
+
+skinparam cloud<<countext_boundary>> {
+    Shadowing false
+    BackgroundColor EXTERNAL_SYSTEM_CARD_COLOR
+    BorderColor EXTERNAL_SYSTEM_CARD_COLOR
+    StereotypeFontSize 0
+}
+
+' Components
+' ################################################
+
+!define ContextBoundary(alias, name) cloud "==name\n" as alias
+
+!define Command(alias, name) rectangle "==name\n\n" <<command>> as alias
+!define Command(alias, name, description) rectangle "==name\n\n description" <<command>> as alias
+
+!define DomainEvent(alias, name) rectangle "==name\n\n" <<domain_event>> as alias
+!define DomainEvent(alias, name, description) rectangle "==name\n\n description" <<domain_event>> as alias
+
+!define Policy(alias, name, description) rectangle "==name\n\n description" <<policy>> as alias
+!define Policy(alias, name) rectangle "==name\n\n" <<policy>> as alias
+
+!define Actor(alias, name, description) rectangle "==name\n\n description" <<actor>> as alias
+!define Actor(alias, name) rectangle "==name\n\n" <<actor>> as alias
+
+!define Aggregate(alias, name, description) rectangle "==name\n\n description" <<aggregate>> as alias
+!define Aggregate(alias, name) rectangle "==name\n\n" <<aggregate>> as alias
+
+!define ReadModel(alias, name, description) rectangle "==name\n\n description" <<read_model>> as alias
+!define ReadModel(alias, name) rectangle "==name\n\n" <<read_model>> as alias
+
+!define ExternalSystem(alias, name, description) rectangle "==name\n\n description" <<external_system>> as alias
+!define ExternalSystem(alias, name) rectangle "==name\n\n" <<external_system>> as alias

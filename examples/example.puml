@@ -1,14 +1,3 @@
-# PlantUML styles for Event Storming
-
-## Getting started
-
-At the top of your PlantUML `.puml` file, you need to include the `styles.puml` file found in the `root` of this repo.
-
-After you have included `styles.puml` you can use the defined macro definitions for the Event Storming elements: `ContextBoundary`, `Command`, `DomainEvent`, `Policy`, `Actor`, `Aggregate`, `ReadModel`, and `ExternalSystem`.
-
-## Example
-
-```csharp
 @startuml
 !include styles.puml
 
@@ -35,6 +24,3 @@ ContextBoundary(CTX2, "Without description context boundary") {
 }
 
 @enduml
-```
-
-![Preview](preview.png)
