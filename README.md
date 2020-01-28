@@ -1,0 +1,1 @@
+# plantuml-styles-for-event-storming
