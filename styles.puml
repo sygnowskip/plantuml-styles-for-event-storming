@@ -61,7 +61,7 @@ skinparam rectangle<<external_system>> {
     BorderColor EXTERNAL_SYSTEM_CARD_COLOR
 }
 
-skinparam cloud<<countext_boundary>> {
+skinparam rectangle<<countext_boundary>> {
     Shadowing false
     BackgroundColor EXTERNAL_SYSTEM_CARD_COLOR
     BorderColor EXTERNAL_SYSTEM_CARD_COLOR
@@ -71,7 +71,7 @@ skinparam cloud<<countext_boundary>> {
 ' Components
 ' ################################################
 
-!define ContextBoundary(alias, name) cloud "==name\n" as alias
+!define ContextBoundary(alias, name) rectangle "==name\n" as alias
 
 !define Command(alias, name) rectangle "==name\n\n" <<command>> as alias
 !define Command(alias, name, description) rectangle "==name\n\n description" <<command>> as alias
